@@ -11,6 +11,13 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule, CommonModule, FormsModule]
 })
 export class RegisterPage implements OnInit {
+  // add register variables
+  protected name!: string;
+  protected lastname!: string;
+  protected email!: string;
+  protected password!: string;
+  protected password2!: string;
+
 
   constructor() { }
 

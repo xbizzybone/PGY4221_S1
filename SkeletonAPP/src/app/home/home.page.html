@@ -1,27 +1,18 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Home
-    </ion-title>
+    <ion-title>Ciudades</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Inicio</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let city of cities" (click)="goToCity(city)">
+      <ion-avatar slot="start">
+        <img [src]="city.image">
+      </ion-avatar>
+      <ion-label>{{ city.name }}</ion-label>
+    </ion-item>
+  </ion-list>
 
-  <div class="content">
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Bienvenido a la página de inicio!</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Esta es la página de inicio de la aplicación.</p>
-        <p>Para navegar a la página de inicio de sesión, haga clic en el tab de inicio de sesión en la parte inferior de la pantalla.</p>
-      </ion-card-content>
-    </ion-card>
-  </div>
+  <app-tabs></app-tabs>
 </ion-content>

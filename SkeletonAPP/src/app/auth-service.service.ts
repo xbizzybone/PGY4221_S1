@@ -17,7 +17,7 @@ export class AuthService {
     
     if (username === 'admin' && password === 'admin') {
       this.isAuthenticated = true;
-      this.router.navigate(['/welcome']);
+      this.router.navigate(['/home']);
     } 
 
     return;

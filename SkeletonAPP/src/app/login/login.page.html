@@ -7,7 +7,7 @@
 <ion-content>
   <form [formGroup]="loginForm" (ngSubmit)="login()">
     <ion-item>
-      <ion-label>Usuario</ion-label>
+      <ion-label position="floating">Usuario</ion-label>
       <ion-input type="text" formControlName="username"></ion-input>
     </ion-item>
     <div *ngIf="loginForm.controls.username.invalid && (loginForm.controls.username.dirty || loginForm.controls.username.touched)" class="alert">
@@ -15,13 +15,14 @@
     </div>
 
     <ion-item>
-      <ion-label>Contraseña</ion-label>
+      <ion-label position="floating">Contraseña</ion-label>
       <ion-input type="password" formControlName="password"></ion-input>
     </ion-item>
     <div *ngIf="loginForm.controls.password.invalid && (loginForm.controls.password.dirty || loginForm.controls.password.touched)" class="alert">
       La contraseña es requerida.
     </div>
 
-    <ion-button expand="full" type="submit" [disabled]="!loginForm.valid">Iniciar Sesión</ion-button>
+    <ion-button expand="block" type="submit" [disabled]="!loginForm.valid">Iniciar Sesión</ion-button>
+    <ion-button expand="block" href="/register">Registrarse</ion-button>
   </form>
 </ion-content>
