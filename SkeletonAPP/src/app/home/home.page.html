@@ -6,7 +6,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let city of cities" (click)="goToCity(city)">
+    <ion-item *ngFor="let city of cities">
       <ion-avatar slot="start">
         <img [src]="city.image">
       </ion-avatar>
